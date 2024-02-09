@@ -34,11 +34,11 @@ export default function Layout() {
       <Tabs.Screen
         name="tab2"
         options={{
-          title: "Tab 2",
+          title: "Scene",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
-                name="two-factor-authentication"
+                name="movie"
                 {...props}
               />
             );
@@ -50,6 +50,30 @@ export default function Layout() {
                 onPress={() => router.push("/")}
               >
                 <MaterialCommunityIcons name="arrow-left" />
+              </Button>
+            );
+          }
+        }}
+      />
+      <Tabs.Screen
+        name="tab3"
+        options={{
+          title: "Character",
+          tabBarIcon(props) {
+            return (
+              <MaterialCommunityIcons
+                name="bag-personal"
+                {...props}
+              />
+            );
+          },
+          headerLeft() {
+            return (
+              <Button
+                ml="$2.5"
+                onPress={() => router.push("/")}
+              >
+                
               </Button>
             );
           }

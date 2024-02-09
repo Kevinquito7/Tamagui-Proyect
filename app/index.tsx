@@ -1,4 +1,4 @@
-import { Github, Instagram, Youtube } from "@tamagui/lucide-icons";
+import {  Youtube } from "@tamagui/lucide-icons";
 import { Link, useRouter } from "expo-router";
 import {
   Button,
@@ -38,19 +38,14 @@ export default function Home() {
         </YStack>
        
         <YStack space="$2.5">
-        <Button
-          onPress={() => router.push("/users/testuser")}
-          style={styles.buttonStyle}
-        >
-          Go to user page
-        </Button>
-        <Button
-          onPress={() => router.push("/tabs")}
-          style={styles.buttonStyle}
-        >
-          Go to tabs page
-        </Button>
-      </YStack>
+  <Button
+    onPress={() => router.push("/tabs")}
+    style={styles.buttonStyle}
+    accessibilityLabel="Go to tabs page"
+  >
+    Iniciar
+  </Button>
+</YStack>
 
 
         <YStack space="$5">
@@ -59,20 +54,7 @@ export default function Home() {
             separator={<Separator />}
             
           >
-            <YGroup.Item>
-              <Link 
-                asChild
-                href="https://www.instagram.com/kevinq.08/"
-                target="_blank"
-                style={styles.git}>
-                <ListItem 
-                  hoverTheme
-                  title="Mi Instagram"
-                  pressTheme
-                  icon={Instagram}
-                />
-              </Link>
-            </YGroup.Item>
+            
             <YGroup.Item>
               <Link style={styles.git}
                 asChild
@@ -87,20 +69,7 @@ export default function Home() {
                 />
               </Link>
             </YGroup.Item>
-            <YGroup.Item>
-              <Link style={styles.git}
-                asChild
-                href="https://github.com/ivopr/tamagui-expo"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  pressTheme
-                  title="This Template"
-                  icon={Github}
-                />
-              </Link>
-            </YGroup.Item>
+           
           </YGroup>
         </YStack>
       </MyStack>
@@ -129,7 +98,7 @@ const styles = StyleSheet.create({
     borderColor: 'orange',
     borderRadius: 20, 
     padding: 10, 
-    marginTop: -125,
+    marginTop: -195,
   },
     git:{
       backgroundColor: 'transparent',
